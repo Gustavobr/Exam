@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Mil - App - Prefeitura</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <script   src="https://code.jquery.com/jquery-3.4.1.min.js"/>
+    </h:head>
+    <h:body>
+        <p:dataTable var="colaborador" value="#{controller.listar_nome_alfabetico()}" rowsPerPageLabel="1..10" rows="10" paginator="true"
+                     sortBy="#{colaborador.nome}">
+            <p:column headerText="Nome">
+                <p:outputLabel value="#{colaborador.nome}"/>
+            </p:column>
+             <p:column headerText="Idade">
+                <p:outputLabel value="#{colaborador.idade}"/>
+            </p:column>
+             <p:column headerText="Salario">
+                <p:outputLabel value="#{colaborador.salario}"/>
+            </p:column>
+        </p:dataTable>
+
+
+
+        
+    </h:body>
+</html>

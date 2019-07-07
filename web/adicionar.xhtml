@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Mil - App - Prefeitura</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <script   src="https://code.jquery.com/jquery-3.4.1.min.js"/>
+    </h:head>
+    <h:body>
+        <hr/>
+        <div align="left">  
+            <h3>  Novo Colaborador </h3>
+            <h:form id="form_add" class="form-group">
+                <p:panel menuTitle="Novo Colaborador">  
+                    <p:messages style="font-size: 12px; color: #0099ff;">
+
+                        <b:label text="Nome:" style="font-size: 12px;"/><b:inputText style="width: 30%;" required="true" requiredMessage="Favor inserir nome"
+                                                                                     size="30" fieldSize="30" value="#{controller.c.nome}"/>
+                        <br/>
+                        <b:label text="Idade:" style="font-size: 12px;"/><b:inputText id="idade_field" style="width: 10%;" required="true" requiredMessage="Favor inserir idade"
+                                                                                      size="30" fieldSize="30" value="#{controller.c.idade}"/>
+
+                        <br/>
+                        <b:label text="Salário" style="font-size: 12px;"/><b:inputText id="salario_field" style="width: 10%;" required="true" requiredMessage="Favor inserir salário"
+                                                                                       size="30" fieldSize="30" value="#{controller.c.salario}"/>
+
+                        <br/>
+
+                        <b:commandButton class="btn-success" value="Gravar" onclick="#{controller.addColaborador()}"/>|| <input type="reset" class="btn-secondary" value="Limpar"/>
+                    </p:messages>
+                </p:panel>
+            </h:form>
+            <br/>
+            <a href="index.xhtml">Voltar - Home</a>
+        </div>
+
+
+
+
+
+    </h:body>
+</html>
+
